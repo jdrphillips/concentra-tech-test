@@ -1,6 +1,10 @@
 package example
 
-trait T
+sealed trait T
+
+case object SuperUser extends T
+case object Admin extends T
+case object User extends T
 
 case class A(str: String) {
   def +(that: A): A = A(this.str + that.str)
