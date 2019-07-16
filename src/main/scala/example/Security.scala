@@ -1,13 +1,14 @@
 package example
 
 trait T
-trait A
 
-object Utility {
-  def combine(a1: A, a2: A): A = a1
+case class A(str: String) {
+  def +(that: A): A = A(this.str + that.str)
 }
 
-import Utility.combine
+object A {
+  val empty: A = A("")
+}
 
 case class Node(
   left: Option[Node],
