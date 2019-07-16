@@ -78,9 +78,9 @@ class SecurityTests extends FunSpec with Matchers {
 
   describe("Nodes should") {
     it("work") {
-      graph.reduce(User, A.empty) shouldBe ""
-      graph.reduce(Admin, A.empty) shouldBe ""
-      graph.reduce(SuperUser, A.empty) shouldBe ""
+      graph.reduce(User, A.empty).str shouldBe ":RLLLLLRL"
+      graph.reduce(Admin, A.empty).str shouldBe ":RLLRLLRRLLRL"
+      graph.reduce(SuperUser, A.empty).str shouldBe ":RRRLLRLLRRLLRL"
     }
   }
 
