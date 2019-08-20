@@ -24,3 +24,10 @@ case class Node(
   def reduce(t: T, a: A): A = ???
 
 }
+
+
+/*
+  - Combine a and actions.
+  - Reduce right with this value, and pass the value to left's reduction. Return this.
+  - If predicate is false, ignore actions and right entirely
+ */
